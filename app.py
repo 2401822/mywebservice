@@ -5,7 +5,7 @@ app = Flask(__name__)
 @app.route("/")
 def hello_world():
     return "Hello, World!"
-@main.route('/activity/config', methods=['GET'])
+@app.route('/activity/config', methods=['GET'])
 def activity_config_page():
     """
     Retorna a página de configuração da atividade.
