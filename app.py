@@ -61,18 +61,18 @@ def analytics_list():
     """
     try:
         # Obtém todas as análises da tabela
-        analises = Analise.query.all()
+        # analises = Analise.query.all()
         analises_list = [
             {
-                "id": analise.id,
-                "atividade_id": analise.atividade_id,
-                "atividade_nome": analise.atividade.nome if analise.atividade else None,
-                "utilizador_id": analise.utilizador_id,
-                "utilizador_nome": analise.utilizador.nome_utilizador if analise.utilizador else None,
-                "dados": analise.dados,
-                "criado_em": analise.criado_em
+                "id":1,
+                "atividade_id": 1,
+                "atividade_nome": "Introducao ao print()",
+                "utilizador_id": 1,
+                "utilizador_nome": "Alexandre Nascimento",
+                "dados": {"s1": "value1", "s2": "value2"},
+                "criado_em": "2024-11-20 10:12:42"
             }
-            for analise in analises
+            #for analise in analises
         ]
         return jsonify(analises_list)
     except Exception as e:
